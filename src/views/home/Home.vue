@@ -1,31 +1,27 @@
 <template>
-  <div>我是第一个页面
-    {{banners}}
+  <div id="home">
+    <article-li></article-li>
+    <qa></qa>
   </div>
 
 </template>
 
 <script>
-import { getHomeMultidata } from "@/network/home";
+import ArticleLi from './childComps/ArticleLi';
+import Qa from './childComps/Qa'
 
 export default {
   name: "Home",
-  data() {
-    return {
-      banners: [],
-      recommends: [],
-    };
-  },
-  created() {
-    getHomeMultidata().then((res) => {
-      console.log(res);
-      this.banners = res.data.banner;
-      this.recommends = res.data.recommend;
-    });
-  },
+  components:{
+    ArticleLi,
+    Qa
+
+  }
+
 };
 </script>
 
 
 <style scoped>
+
 </style>

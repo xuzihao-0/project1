@@ -41,9 +41,7 @@ export default {
     itemclick4(){
       this.$router.push('./test')
     },
-    activeIndex(){
-      
-    }
+    
   },
 
 };
@@ -53,7 +51,9 @@ export default {
 .nav{
 
   margin: 0 auto;
-  background-color: rgba(217, 221, 221, 0.918);
+  /* background-color: rgba(217, 221, 221, 0.918);
+   */
+   /* background-color: #5880A9; */
   padding: 0;
 
 
