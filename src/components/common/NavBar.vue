@@ -8,11 +8,13 @@
           mode="horizontal"
           @select="handleSelect"
           text-color="#000000"
+          active-text-color="#444444"
         >
           <el-menu-item index="1" @click="itemclick">首页</el-menu-item>
           <el-menu-item index="2" @click="itemclick2">阅读</el-menu-item>
           <el-menu-item index="3" @click="itemclick3">问答</el-menu-item>
           <el-menu-item index="4" @click="itemclick4">测试</el-menu-item>
+          <el-menu-item index="5" @click="itemclick5">登录/注册</el-menu-item>
         </el-menu>
 
      </div>
@@ -30,7 +32,7 @@ export default {
   methods:{
     itemclick(){
       console.log('itemclick');
-      this.$router.push("/home")
+      this.$router.push("/")
     },
     itemclick2(){
       this.$router.push("/read")
@@ -41,7 +43,10 @@ export default {
     itemclick4(){
       this.$router.push('./test')
     },
-    
+    itemclick5(){
+      this.$router.push('/login')
+    }
+
   },
 
 };

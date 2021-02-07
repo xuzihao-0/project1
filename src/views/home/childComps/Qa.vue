@@ -5,7 +5,7 @@
     <el-container>
       <el-main>
         <el-row :gutter="20" v-for="item in 8 / 2" :key="item">
-          <el-col :span="8" :offset="5">
+          <el-col :span="10" :offset="6">
             <div class="grid-content bg-purple">
               <!-- 嵌套一个a标签 -->
               <a href="">
@@ -15,13 +15,14 @@
               </a>
             </div>
           </el-col>
-          <el-col :span="4" :offset="1">
+          <!-- <el-col :span="4" :offset="1">
             <div class="grid-content bg-purple">
               {{ item + 5 }}
             </div>
-          </el-col>
+          </el-col> -->
         </el-row>
       </el-main>
+      <!-- <el-aside height="100%">Aside</el-aside> -->
     </el-container>
   </div>
 </template>
@@ -38,6 +39,7 @@ export default {
   },
   data() {
     return {
+      
 
     };
   },
@@ -101,6 +103,7 @@ export default {
   text-align: center;
   line-height: 160px;
 }
+
 .ph{
   height: 100%;
   widows: 50px;

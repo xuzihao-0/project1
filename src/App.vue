@@ -1,16 +1,14 @@
 <template>
   <div id="app">
     <nav-bar></nav-bar>
-    <carousel></carousel>
-    <!-- <Card></Card> -->
+    <!-- <carousel></carousel> -->
+
 
     <router-view></router-view>
   </div>
 </template>
 <script>
-import Card from './components/common/Card';
 
-import Carousel from './components/common/Carousel '
 import NavBar from './components/common/NavBar'
 
 
@@ -18,8 +16,7 @@ export default {
   name: "app",
   components:{
     NavBar,
-    Carousel,
-    Card
+
 
 
   }
@@ -30,6 +27,9 @@ export default {
 
 <style>
 @import url('assets/css/normalize.css');
+#app{
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
 
 
 

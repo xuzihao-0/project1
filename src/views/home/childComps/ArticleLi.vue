@@ -1,23 +1,45 @@
 <template>
   <div id="article">
 
+
     <art-bar></art-bar>
     <el-container>
       <el-main>
         <el-row :gutter="20" v-for="item in 8 / 2" :key="item">
           <el-col :span="6" :offset="5">
             <div class="grid-content bg-purple">
+
               <!-- 嵌套一个a标签 -->
               <a href="">
                   <div class="ph" >
-                <img src="@/assets/img/666.jpg" alt="">
+                    <div class="ss">
+
+                      <div class="sss"></div>
+
+                    </div>
+            <img src="@/assets/img/666.jpg" alt="">
+
               </div>
+
               </a>
             </div>
           </el-col>
           <el-col :span="6" :offset="1">
             <div class="grid-content bg-purple">
-              {{ item + 5 }}
+
+              <!-- 嵌套一个a标签 -->
+              <a href="">
+                  <div class="ph" >
+                    <div class="ss">
+
+                      <div class="sss"></div>
+
+                    </div>
+            <img src="@/assets/img/666.jpg" alt="">
+
+              </div>
+
+              </a>
             </div>
           </el-col>
         </el-row>
@@ -59,7 +81,7 @@ export default {
 }
 .el-col {
   border-radius: 4px;
-  height: 140px;
+  height: 100px;
 }
 /* .bg-purple-dark {
   background: #99a9bf;
@@ -74,6 +96,7 @@ export default {
   border-radius: 4px;
   min-height: 36px;
   padding: 10px;
+  margin-bottom: 20px;
 
   height: 100px;
 }
@@ -108,11 +131,26 @@ export default {
   widows: 50px;
 
 }
+.ss{
+  width: 60%;
+  height: 100%;
+  background-color: antiquewhite;
+  float: right;
+  text-align: center;
+}
+.sss{
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
 img{
   display: block;
   height: 100%;
-  width: 100px;
+  width: 30%;
   margin-left: 0;
+
 
 
 }

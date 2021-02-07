@@ -3,15 +3,23 @@
     <el-row :gutter="20">
       <el-col :span="16" :offset="4"
         ><div class="grid-content bg-purple">
-          <el-carousel :interval="5000" arrow="always" height="200px">
-            <el-carousel-item v-for="(item,index) in banners.list" :key="index">
+          <el-carousel :interval="5000" arrow="always" height="300px">
+            <el-carousel-item v-for="item in 4" :key="item" >
+              <div class="img1">
+                <a href="">
+                  <img src="@/assets/img/1.jpg" alt="" />
+                </a>
+
+              </div>
+            </el-carousel-item>
+            <!-- <el-carousel-item v-for="(item,index) in banners.list" :key="index">
               <div class="img1">
                 <a :href="item.link">
                   <img :src="item.image" alt="" />
                 </a>
 
               </div>
-            </el-carousel-item>
+            </el-carousel-item> -->
           </el-carousel></div
       ></el-col>
     </el-row>
@@ -21,7 +29,7 @@
 </template>
 //  :offset="2"
 <script>
-import { getHomeMultidata } from "@/network/home";
+// import { getHomeMultidata } from "@/network/home";
 export default {
   name: "carousel",
   data() {
@@ -30,13 +38,13 @@ export default {
       recommends: [],
     };
   },
-  created() {
-    getHomeMultidata().then((res) => {
-      console.log(res);
-      this.banners = res.data.banner;
-      this.recommends = res.data.recommend;
-    });
-  },
+  // created() {
+  //   getHomeMultidata().then((res) => {
+  //     console.log(res);
+  //     this.banners = res.data.banner;
+  //     this.recommends = res.data.recommend;
+  //   });
+  // },
 };
 </script>
 <style scoped>

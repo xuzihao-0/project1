@@ -7,6 +7,12 @@ const Home = () => import('../views/home/Home')
 const Question = () => import('../views/questions/Question')
 const Read = () => import('../views/read/Read')
 const Test = () => import('../views/testing/Test')
+const Login = () => import('../components/common/login/Login')
+const originalPush = VueRouter.prototype.push
+
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
 
 Vue.use(VueRouter)
 
@@ -16,11 +22,11 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  {
-    path: '/home',
-    name: 'Home',
-    component: Home
-  },
+  // {
+  //   path: '/home',
+  //   name: 'Home',
+  //   component: Home
+  // },
 
   {
     path:'/qs',
@@ -36,6 +42,11 @@ const routes = [
     path:'/test',
     name:'Test',
     component:Test
+  },
+  {
+    path:'/login',
+    name:'Login',
+    component:Login
   }
 ]
 
