@@ -1,21 +1,27 @@
 <template>
   <div id="app">
-    <nav-bar></nav-bar>
+    <nav-bar ></nav-bar>
     <!-- <carousel></carousel> -->
+    <!-- <art></art> -->
 
 
     <router-view></router-view>
+
   </div>
 </template>
 <script>
 
 import NavBar from './components/common/NavBar'
+import Art from '@/views/home/childComps/Art'
+// import Carousel from '@/components/common/Carousel'
 
 
 export default {
   name: "app",
   components:{
     NavBar,
+    Art,
+
 
 
 

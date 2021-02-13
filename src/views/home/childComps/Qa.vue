@@ -1,87 +1,42 @@
 <template>
   <div id="qa">
+    <el-container class="ac">
+      <el-main class="am">
+        <el-row :gutter="20">
+          <el-col :span="10" :offset="7"
+            ><div class="grid-content bg-purple" v-for="item in 10" :key="item">
+              <div class="s1">
+                <img src="@/assets/img/1.jpg" alt="">
 
-
-    <el-container>
-      <el-main>
-        <el-row :gutter="20" v-for="item in 8 / 2" :key="item">
-          <el-col :span="10" :offset="6">
-            <div class="grid-content bg-purple">
-              <!-- 嵌套一个a标签 -->
-              <a href="">
-                  <div class="ph" >
-                <img src="@/assets/img/666.jpg" alt="">
               </div>
-              </a>
-            </div>
-          </el-col>
-          <!-- <el-col :span="4" :offset="1">
-            <div class="grid-content bg-purple">
-              {{ item + 5 }}
-            </div>
-          </el-col> -->
+              <div class="s2">c</div></div
+          ></el-col>
         </el-row>
       </el-main>
-      <!-- <el-aside height="100%">Aside</el-aside> -->
     </el-container>
   </div>
 </template>
 
 <script>
-
-
-
 export default {
   name: "qa",
-  components: {
-
-
-  },
+  components: {},
   data() {
     return {
-      
 
     };
   },
-  methods:{
-    hello(){
-      console.log('heoool');
-    }
-  }
+  methods: {
+    hello() {
+      console.log("heoool");
+    },
+  },
 };
 </script>
 
 
 <style scoped>
-
-.el-row {
-  margin-bottom: 15px;
-}
-.el-col {
-  border-radius: 4px;
-  height: 140px;
-}
-/* .bg-purple-dark {
-  background: #99a9bf;
-} */
-.bg-purple {
-  background: #d3dce6;
-}
-/* .bg-purple-light {
-  background: #e5e9f2;
-} */
-.grid-content {
-  border-radius: 4px;
-  min-height: 36px;
-  padding: 10px;
-
-  height: 100px;
-}
-.row-bg {
-  padding: 10px 0;
-  /* background-color: #f9fafc; */
-}
-.el-container {
+.ac {
   margin-top: 0;
   width: 100%;
   margin-bottom: 40px;
@@ -94,28 +49,37 @@ export default {
   line-height: 60px;
 }
 
-
-
-.el-main {
+.am {
   /* 这是背景色 */
   /* background-color: #232425; */
   color: #333;
   text-align: center;
   line-height: 160px;
+  width: 200px;
 }
-
-.ph{
-  height: 100%;
-  widows: 50px;
-
+.grid-content {
+  background-color: #a3a7a7;
+  margin-bottom: 30px;
+  height: 130px;
+  display: flex;
 }
-img{
-  display: block;
+.s1 {
+  flex: 1;
+
   height: 100%;
+  /* background-color: blueviolet; */
+}
+.s1 img {
   width: 100px;
-  margin-left: 0;
-
-
+  height: 100px;
+  display: block;
+  margin: 15px auto;
+}
+.s2 {
+  flex: 3;
+  background-color: burlywood;
+  height: 100%;
+  text-align: center;
 }
 </style>
 

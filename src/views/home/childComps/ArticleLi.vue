@@ -1,44 +1,37 @@
 <template>
   <div id="article">
-
-
-    <art-bar></art-bar>
     <el-container>
       <el-main>
         <el-row :gutter="20" v-for="item in 8 / 2" :key="item">
-          <el-col :span="6" :offset="5">
+          <el-col :span="7" :offset="5">
             <div class="grid-content bg-purple">
-
               <!-- 嵌套一个a标签 -->
               <a href="">
-                  <div class="ph" >
-                    <div class="ss">
-
-                      <div class="sss"></div>
-
+                <div class="ph">
+                  <div class="ss">
+                    <div class="sss">
+                      <div class="son">{{a}}</div>
                     </div>
-            <img src="@/assets/img/666.jpg" alt="">
+                  </div>
 
-              </div>
-
+                  <img src="@/assets/img/666.jpg" alt="" />
+                </div>
               </a>
             </div>
           </el-col>
-          <el-col :span="6" :offset="1">
+          <el-col :span="7" :offset="1">
             <div class="grid-content bg-purple">
-
               <!-- 嵌套一个a标签 -->
               <a href="">
-                  <div class="ph" >
-                    <div class="ss">
-
-                      <div class="sss"></div>
-
+                <div class="ph">
+                  <div class="ss">
+                    <div class="sss">
+                      <div class="son">{{a}}</div>
                     </div>
-            <img src="@/assets/img/666.jpg" alt="">
+                  </div>
 
-              </div>
-
+                  <img src="@/assets/img/666.jpg" alt="" />
+                </div>
               </a>
             </div>
           </el-col>
@@ -49,31 +42,35 @@
 </template>
 
 <script>
-import ArtBar from "@/components/common/ArtBar";
-
+// import ArtBar from "@/components/common/ArtBar";
 
 export default {
   name: "articleli",
-  components: {
-    ArtBar
-
+  props: {
+    tl: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
   },
+  components: {},
   data() {
     return {
-
+      a:'怎么样变得更好'
     };
   },
-  methods:{
-    hello(){
-      console.log('heoool');
-    }
-  }
+  methods: {
+    hello() {
+      console.log("heoool");
+    },
+  },
 };
 </script>
 
 
 <style scoped>
-#article{
+#article {
   margin-bottom: 20px;
 }
 .el-row {
@@ -95,9 +92,8 @@ export default {
 .grid-content {
   border-radius: 4px;
   min-height: 36px;
-  padding: 10px;
   margin-bottom: 20px;
-
+  padding: 10px;
   height: 100px;
 }
 .row-bg {
@@ -117,8 +113,6 @@ export default {
   line-height: 60px;
 }
 
-
-
 .el-main {
   /* 这是背景色 */
   background-color: #e9eef3;
@@ -126,33 +120,42 @@ export default {
   text-align: center;
   line-height: 160px;
 }
-.ph{
+.ph {
   height: 100%;
-  widows: 50px;
-
 }
-.ss{
-  width: 60%;
+.ss {
+  width: 65%;
   height: 100%;
   background-color: antiquewhite;
   float: right;
   text-align: center;
 }
-.sss{
+.sss {
   width: 80%;
   height: 100%;
   margin: 0 auto;
+
+  color: white;
+  display: flex;
+  line-height: 100%;
+}
+.son {
+  width: 80%;
+
+  height: 50px;
+  background-color: black;
+  margin: auto auto;
+  text-align: center;
+  line-height: 50px;
+
+  /* flex: 1; */
 }
 
-
-img{
+img {
   display: block;
   height: 100%;
   width: 30%;
   margin-left: 0;
-
-
-
 }
 </style>
 

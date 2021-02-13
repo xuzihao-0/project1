@@ -3,10 +3,8 @@
     <el-row :gutter="20">
       <el-col :span="12" :offset="7" style="height:50px"
         ><div class="grid-content bg-purple">
-          <el-button round>最新热文</el-button>
-          <el-button round>心理科普</el-button>
-          <el-button round>人际社交</el-button>
-          <el-button round>婚恋情感</el-button>
+          <el-button round v-for="(item,index) in title" :key="index" @click="btnclick(index)">{{item}}</el-button>
+
         </div></el-col
       >
     </el-row>
@@ -16,6 +14,22 @@
 <script>
 export default {
   name: "artbar",
+  props:{
+
+  },
+  data(){
+    return {
+      str:'dfdsf',
+      title :['最新热文','心理科普','人际社交','婚恋情感']
+
+    }
+  },
+  methods:{
+    btnclick(index){
+      console.log(index);
+      this.$emit('btnclick',index)
+    }
+  }
 };
 </script>
 
